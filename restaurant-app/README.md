@@ -116,19 +116,3 @@ Backend
 2. Update .env file
 3. Run npm install
 4. Run npx nodemon server.js
-
-## Screenshots
-
-### Home Page
-![Home Page](screenshots/home.png)
-
-### Menu Page
-![Menu Page](screenshots/menu.png)
-
-### Login Page
-![Login Page](screenshots/login.png)
-
-### Order Details
-![Order Details](screenshots/order.png)
-
-*Note: Add actual screenshots to the `screenshots/` folder and update paths as needed.*
