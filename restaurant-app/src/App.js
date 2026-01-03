@@ -6,6 +6,7 @@ import About from "./pages/About"
 import Menu from "./pages/Menu"
 import Contact from "./pages/Contact"
 import DishDetails from "./pages/DishDetails"
+import axios from "axios"
 
 export default function App() {
   return (

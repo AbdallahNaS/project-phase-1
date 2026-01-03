@@ -1,16 +1,24 @@
 import { Link, useLocation } from "react-router-dom"
+
 export default function NavBar(){
   const location = useLocation()
   const active = (p)=> location.pathname===p?"nav-link active":"nav-link"
   return(
-    <header className="nav">
-      <div className="brand"><Link to="/" className="brand">RestoApp</Link></div>
-      <nav className="nav-links">
-        <Link className={active("/")} to="/">Home</Link>
-        <Link className={active("/menu")} to="/menu">Menu</Link>
-        <Link className={active("/about")} to="/about">About</Link>
-        <Link className={active("/contact")} to="/contact">Contact</Link>
-      </nav>
-    </header>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container">
+        <Link className="navbar-brand" to="/">RestoApp</Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto align-items-center">
+            <li className="nav-item"><Link className={active("/")} to="/">Home</Link></li>
+            <li className="nav-item"><Link className={active("/menu")} to="/menu">Menu</Link></li>
+            <li className="nav-item"><Link className={active("/about")} to="/about">About</Link></li>
+            <li className="nav-item"><Link className={active("/contact")} to="/contact">Contact</Link></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   )
 }
